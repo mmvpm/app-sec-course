@@ -57,7 +57,7 @@ Sink: java.io.FileInputStream.read (через com.itextpdf.text.pdf.codec.Base6
 
 Публичный метод: com.itextpdf.text.pdf.codec.Base64.decodeFromFile
 
-### TempFileCache.<init>
+### TempFileCache.\<init>
 
 Стек вызовов: 1
 
