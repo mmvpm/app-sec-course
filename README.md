@@ -12,6 +12,7 @@
 - [CVE-2023-46122.md](reports/CVE-2023-46122.md)
 - [CVE-2024-37902.md](reports/CVE-2024-37902.md)
 - [CVE-2024-51127.md](reports/CVE-2024-51127.md)
+- [CWE-22-itextpdf.md](reports/CWE-22-itextpdf.md)
 
 Разделение по домашкам:
 
