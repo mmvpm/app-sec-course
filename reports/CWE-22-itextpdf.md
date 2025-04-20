@@ -16,7 +16,7 @@ POC: [itextpdf/CompareToolUtil_1.java](../src/main/java/org/example/itextpdf/Com
 
 Метод позволяет удалить произвольный файл в системе
 
-Sink: java.io.File.<init>
+Sink: java.io.File.\<init\>
 
 Публичный метод: com.itextpdf.testutils.CompareToolUtil.removeFiles
 
@@ -57,7 +57,7 @@ Sink: java.io.FileInputStream.read (через com.itextpdf.text.pdf.codec.Base6
 
 Публичный метод: com.itextpdf.text.pdf.codec.Base64.decodeFromFile
 
-### TempFileCache.\<init>
+### TempFileCache.\<init\>
 
 Стек вызовов: 1
 
@@ -67,7 +67,7 @@ POC: [itextpdf/TempFileCache_1.java](../src/main/java/org/example/itextpdf/TempF
 
 Sink: java.io.ObjectOutputStream.writeObject
 
-Публичный метод: com.itextpdf.text.io.TempFileCache.<init>
+Публичный метод: com.itextpdf.text.io.TempFileCache.\<init\>
 
 
 
