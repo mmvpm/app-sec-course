@@ -20,7 +20,7 @@ public class AIDjlAttack {
 
     public static void mainZip() throws IOException {
         String zipFileName = "exposed/djl-exploit.zip";
-        String fileNameInsideZip = "/Users/mmvpm/Courses/12-appsec/cve-examples/ror/r/r/r/djl-bad-file-from-zip.txt";
+        String fileNameInsideZip = "/Users/mmvpm/Courses/app-sec-course/exposed/r/r/r/djl-bad-file-from-zip.txt";
         createZip(zipFileName, fileNameInsideZip, "Some file content");
 
         File destDir = new File("exposed/djl-unzipped-zip");
@@ -31,7 +31,7 @@ public class AIDjlAttack {
 
     public static void mainTar() throws IOException {
         String tarFileName = "exposed/djl-exploit.tar";
-        String fileNameInsideTar = "/Users/mmvpm/Courses/12-appsec/cve-examples/djl-bad-file-from-tar.txt";
+        String fileNameInsideTar = "/Users/mmvpm/Courses/app-sec-course/exposed/djl-bad-file-from-tar.txt";
         createTar(tarFileName, fileNameInsideTar, "Some file content");
 
         File destDir = new File("exposed/djl-unzipped-tar");
