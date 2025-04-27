@@ -19,6 +19,8 @@ public class LinkisAttack {
         destDir.mkdir();
 
         ZipUtils.fileToUnzip(zipFileName, destDir.getAbsolutePath());
+
+        System.out.println("ZIP " + zipFileName + " was unzipped to " + destDir.getAbsolutePath());
     }
 
     private static void createZip(String zipFileName, String entryName, String fileContent) throws IOException {
@@ -28,6 +30,7 @@ public class LinkisAttack {
             zipOut.putNextEntry(zipEntry);
             zipOut.write(fileContent.getBytes());
             zipOut.closeEntry();
+            System.out.println("ZIP " + zipFileName + " was created");
         }
     }
 }

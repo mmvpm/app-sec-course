@@ -27,6 +27,8 @@ public class AIDjlAttack {
         destDir.mkdir();
 
         ZipUtils.unzip(new FileInputStream(zipFileName), destDir.toPath());
+
+        System.out.println("ZIP " + zipFileName + " was unzipped to " + destDir.getAbsolutePath());
     }
 
     public static void mainTar() throws IOException {
@@ -38,6 +40,8 @@ public class AIDjlAttack {
         destDir.mkdir();
 
         TarUtils.untar(new FileInputStream(tarFileName), destDir.toPath(), false);
+
+        System.out.println("TAR " + tarFileName + " was unzipped to " + destDir.getAbsolutePath());
     }
 
     private static void createZip(String zipFileName, String entryName, String fileContent) throws IOException {
@@ -47,6 +51,7 @@ public class AIDjlAttack {
             zipOut.putNextEntry(zipEntry);
             zipOut.write(fileContent.getBytes());
             zipOut.closeEntry();
+            System.out.println("ZIP " + zipFileName + " was created");
         }
     }
 
@@ -83,6 +88,7 @@ public class AIDjlAttack {
             }
             byte[] endBlocks = new byte[1024];
             fos.write(endBlocks);
+            System.out.println("TAR " + tarFileName + " was created");
         }
     }
 }

@@ -19,6 +19,8 @@ public class HuToolAttack {
         destDir.mkdir();
 
         ZipUtil.unzip(new File(zipFileName), destDir);
+
+        System.out.println("ZIP " + zipFileName + " was unzipped to " + destDir.getAbsolutePath());
     }
 
     private static void createZip(String zipFileName, String entryName, String fileContent) throws IOException {
@@ -28,6 +30,7 @@ public class HuToolAttack {
             zipOut.putNextEntry(zipEntry);
             zipOut.write(fileContent.getBytes());
             zipOut.closeEntry();
+            System.out.println("ZIP " + zipFileName + " was created");
         }
     }
 }
